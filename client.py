@@ -1,3 +1,4 @@
+import sys
 import socket
 import colorama
 import threading
@@ -5,7 +6,7 @@ import threading
 colorama.init()
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(("192.168.10.142", 5050))
+s.connect((sys.argv[1], 5050))
 s.settimeout(0.8)
 
 while True:
